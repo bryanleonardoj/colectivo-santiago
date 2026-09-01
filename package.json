@@ -1,0 +1,24 @@
+{
+  "name": "colectivo-santiago",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Prototipo web de la aplicación de movilidad para taxis colectivos — Proyecto Integrado TIHI43, contraparte CONATACOCH.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node pruebas/reglas.test.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "^7.18.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "vite": "^8.2.2"
+  }
+}

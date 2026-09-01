@@ -1,0 +1,148 @@
+html, body, #root{min-height:100%;width:100%;overflow-x:hidden;}
+body{background:var(--bg);}
+.shell{width:100%;max-width:480px;margin:0 auto;padding:1rem .9rem 5.7rem;display:flex;flex-direction:column;}
+.shell > h1{font-size:1.7rem;line-height:1.1;margin:.45rem 0 .65rem;}
+.shell > p{font-size:.82rem;margin:.5rem 0 1.1rem;}
+.shell .card h1{font-size:1.25rem;margin:.3rem 0 .9rem;}
+.profile-list{display:grid;gap:.65rem;}
+.profile-list .card{display:block;text-decoration:none;padding:1rem;}
+.profile-list .card h2{font-size:1rem;margin:.35rem 0 .25rem;}
+.profile-list .card p{font-size:.75rem;color:var(--ink2);margin:0;line-height:1.45;}
+.centro{display:flex;justify-content:center;width:100%;min-height:100dvh;padding:0;background:var(--bg);}
+.phone{width:100%;max-width:430px;height:calc(100dvh - 4.4rem);min-height:calc(100dvh - 4.4rem);border:0;border-radius:0;box-shadow:none;overflow:hidden;}
+.appbar{padding:.65rem 1rem .75rem;}
+.screen{min-height:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;padding-bottom:0;}
+.screen > .mapwrap{position:relative;inset:auto;width:100%;height:43dvh;min-height:260px;max-height:390px;flex:none;}
+.mapwrap .leaflet-container{width:100%;height:100%;font-family:var(--font);z-index:1;}
+.mapwrap .leaflet-overlay-pane svg{width:auto;height:auto;}
+.mapwrap .leaflet-tile-pane{filter:saturate(.8) contrast(1.02);}
+.mapwrap .leaflet-top.leaflet-left{top:auto;left:auto;right:.6rem;bottom:2.2rem;z-index:600;}
+.mapwrap .leaflet-control-zoom a{background:#171b21;color:#f4f6f8;border-color:#39414b;}
+.mapwrap .leaflet-control-zoom a:hover{background:#252c34;color:#ffffff;}
+.map-attribution{position:absolute;right:3px;bottom:3px;z-index:500;color:#58616c;background:rgba(255,255,255,.75);font:9px var(--font);padding:1px 3px;text-decoration:none;}
+.route-legend{position:absolute;left:.6rem;bottom:.6rem;z-index:500;display:flex;gap:.35rem;padding:.35rem .45rem;border-radius:8px;background:rgba(255,255,255,.9);box-shadow:var(--shadow);font:700 .62rem var(--mono);}
+.route-legend span{display:flex;align-items:center;gap:.25rem;color:#39414b;}
+.route-legend i{width:9px;height:9px;border-radius:50%;display:block;}
+.row{width:100%;border:0;background:transparent;color:var(--ink);font-family:var(--font);text-align:left;}
+.row:active{background:var(--line2);}
+.sheet{position:relative;inset:auto;max-height:none;border-radius:0;box-shadow:none;flex:none;}
+.sheet-b{overflow:visible;}
+.sheet-b{padding-bottom:1.25rem;}
+.chips{top:.55rem;left:.55rem;right:.55rem;}
+.locate-button{align-self:flex-end;margin:-2.6rem .7rem .8rem;z-index:5;border:1px solid var(--line);border-radius:9px;padding:.55rem .7rem;background:var(--panel);color:var(--ink);font:700 .68rem var(--font);box-shadow:var(--shadow);cursor:pointer;}
+.locate-button:active{background:var(--amber-bg);}
+.chip{min-height:34px;}
+.mobile-nav{position:fixed;z-index:30;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);height:4.4rem;padding:.4rem .35rem calc(.4rem + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--panel) 94%,transparent);border-top:1px solid var(--line);backdrop-filter:blur(14px);}
+.mobile-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.18rem;color:var(--ink3);font-size:.62rem;font-weight:700;text-decoration:none;}
+.mobile-nav a span{font-size:1.2rem;line-height:1;}
+.mobile-nav a[aria-current="page"]{color:var(--amber);}
+.tabs{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem;}
+.tabs button{flex:1 1 0;min-width:5.2rem;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink2);padding:.65rem .35rem;font:600 .72rem var(--font);}
+.tabs button:active{background:var(--amber-bg);color:var(--amber-ink);}
+.tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg);}
+.tabs button:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.shell > .card{margin-bottom:.65rem;}
+.shell .kpis{margin-bottom:.65rem;}
+.shell select,.shell input,.shell textarea{margin-top:.55rem;}
+.shell > .card,.shell > .kpis{width:100%;}
+.tabs{flex:none;}
+.eyebrow{display:block;margin-bottom:.18rem;color:var(--amber-ink);font:700 .58rem var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+.sheet-h h3{font-size:1rem;line-height:1.2;}
+.sheet-h > span{white-space:nowrap;}
+.row{min-height:68px;}
+.row .info small + .availability{color:var(--ok);font-weight:700;}
+.row .info small:only-of-type{margin-top:3px;}
+.row.sel .availability{color:var(--amber-ink);}
+.status-card.is-active{border-color:var(--ok);}
+.status-line{display:flex;align-items:flex-start;justify-content:space-between;gap:.7rem;}
+.helper{margin:.45rem 0 .8rem;color:var(--ink2);font-size:.75rem;line-height:1.45;}
+.passenger-card{border-left:3px solid var(--amber);}
+.passenger-count{display:flex;align-items:baseline;gap:.35rem;margin:.6rem 0 .15rem;}
+.passenger-count span:last-child{color:var(--ink3);font:600 .75rem var(--mono);}
+.quick-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;background:rgba(7,10,13,.72);}
+.quick-panel{position:relative;width:100%;max-width:480px;margin:0 auto;padding:1.2rem 1rem calc(1rem + env(safe-area-inset-bottom));border-radius:20px 20px 0 0;background:var(--panel);box-shadow:0 -16px 40px rgba(0,0,0,.35);}
+.quick-panel h2{margin:.3rem 0;font-size:1.25rem;}
+.close-button{position:absolute;top:.75rem;right:.8rem;width:38px;height:38px;border:0;border-radius:50%;background:var(--line2);color:var(--ink);font-size:1.5rem;cursor:pointer;}
+.quick-counter{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:1rem 0 .35rem;}
+.quick-counter button{width:64px;height:64px;border:1px solid var(--line);border-radius:18px;background:var(--bg);color:var(--ink);font-size:2rem;cursor:pointer;}
+.quick-counter button:disabled{opacity:.35;cursor:not-allowed;}
+.quick-counter strong{font:600 3.2rem var(--mono);}
+.quick-capacity{text-align:center;margin-bottom:1rem;color:var(--ok);font:700 .75rem var(--mono);}
+.support-launch{margin-top:.5rem;}
+.support-overlay{align-items:center;padding:1rem;}
+.locked-phone{position:relative;width:min(100%,330px);min-height:620px;padding:1.1rem 1rem 1.2rem;border:7px solid #080a0d;border-radius:34px;background:linear-gradient(155deg,#202a35 0%,#0c1117 58%,#101820 100%);color:#f5f7fa;box-shadow:0 20px 60px rgba(0,0,0,.55);display:flex;flex-direction:column;}
+.locked-status{display:flex;justify-content:space-between;font:600 .7rem var(--mono);color:#dce4eb;}
+.locked-time{text-align:center;margin-top:3.2rem;font:500 4.1rem var(--mono);letter-spacing:-.08em;line-height:1;}
+.locked-date{text-align:center;margin-top:.45rem;color:#b7c2cd;font-size:.78rem;}
+.locked-service{display:flex;flex-direction:column;align-items:center;gap:.45rem;margin-top:3.2rem;padding:1rem;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.07);}
+.locked-service b{font:700 1.6rem var(--mono);}
+.locked-service small{color:#b7c2cd;font:600 .7rem var(--mono);}
+.locked-passengers{margin-top:1rem;padding:1rem;border-radius:16px;background:#f5f7fa;color:#11161c;}
+.locked-passengers>span{display:block;color:#687482;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;}
+.locked-passengers>strong{display:block;margin:.25rem 0 .65rem;font:600 2.7rem var(--mono);}
+.locked-passengers>strong small{font-size:1rem;color:#687482;}
+.locked-passengers .quick-counter{margin:0;justify-content:flex-end;gap:.45rem;}
+.locked-passengers .quick-counter button{width:48px;height:48px;border-radius:14px;background:#e5eaf0;}
+.locked-hint{margin-top:auto;padding:.85rem 0;color:#aebbc8;text-align:center;font-size:.7rem;line-height:1.4;}
+.locked-phone>.btn{margin-top:.2rem;color:#e6edf3;border-color:rgba(255,255,255,.25);}
+@media (min-width:600px){
+  .centro{padding:1.5rem 0 5.8rem;}
+  .phone{height:calc(100dvh - 7.3rem);min-height:620px;border:1px solid var(--line);border-radius:24px;box-shadow:var(--phone-shadow);}
+  .shell{padding-top:2rem;}
+  .mobile-nav{left:50%;right:auto;width:480px;transform:translateX(-50%);border-left:1px solid var(--line);border-right:1px solid var(--line);}
+}
+
+/* ── solicitudes de cupo ─────────────────────────────────────────── */
+.cupo-zona{padding:.55rem .75rem 0;}
+.cupo-card .lbl{margin-bottom:.45rem;}
+.cupo-personas{display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;}
+.cupo-num{border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink2);padding:.6rem 0;font:600 1rem var(--mono);cursor:pointer;}
+.cupo-num[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg);}
+.cupo-num:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.cupo-extras{display:grid;grid-template-columns:repeat(3,1fr);gap:.35rem;}
+.cupo-extra{display:flex;flex-direction:column;align-items:flex-start;gap:.1rem;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:.6rem;text-align:left;cursor:pointer;font-family:var(--font);}
+.cupo-extra span{font-size:1.15rem;line-height:1.2;}
+.cupo-extra b{font-size:.76rem;color:var(--ink);}
+.cupo-extra small{font-size:.6rem;color:var(--ink3);line-height:1.3;}
+.cupo-extra[aria-pressed="true"]{border-color:var(--amber);background:var(--amber-bg);}
+.cupo-extra[aria-pressed="true"] b{color:var(--amber-ink);}
+.cupo-extra:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.cupo-estado.is-asignado{border-color:var(--ok);border-left:3px solid var(--ok);}
+.cupo-patente{font:600 1.9rem var(--mono);letter-spacing:-.02em;margin:.2rem 0 .5rem;}
+.cupo-etiquetas{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.7rem;}
+.row.no-apto{opacity:.55;}
+.row .sin-espacio{display:block;font-size:.68rem;color:var(--bad);font-weight:700;margin-top:1px;}
+.row .capacidades{display:inline-flex;align-items:center;gap:.28rem;margin-top:3px;}
+.row .capacidades i{font-style:normal;font-size:.78rem;line-height:1;}
+.row .capacidades em{font-style:normal;font-size:.63rem;color:var(--ink3);}
+
+/* chinchetas de solicitud sobre el mapa */
+.pin-solicitud-envoltura{background:none;border:0;}
+.pin-solicitud{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:2px solid #ffffff;background:#2f80ed;color:#ffffff;font:700 .8rem var(--font);box-shadow:0 2px 8px rgba(0,0,0,.45);}
+.pin-solicitud.pin-maletero{background:#ffffff;border-color:#7a5cff;font-size:1.05rem;}
+.pin-solicitud.pin-silla{background:#ffffff;border-color:#0f9d58;border-width:3px;font-size:1.05rem;}
+
+/* interruptores de capacidad del conductor */
+.switch-fila{display:flex;align-items:center;gap:.7rem;width:100%;border:1px solid var(--line);border-radius:11px;background:var(--bg);padding:.65rem .7rem;margin-top:.5rem;cursor:pointer;font-family:var(--font);text-align:left;}
+.switch-fila:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.switch-icono{font-size:1.3rem;flex:none;}
+.switch-texto{flex:1;min-width:0;}
+.switch-texto b{display:block;font-size:.8rem;color:var(--ink);}
+.switch-texto small{display:block;font-size:.66rem;color:var(--ink3);margin-top:1px;line-height:1.35;}
+.switch-marca{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--line);position:relative;transition:border-color .15s,background .15s;}
+.switch-fila[aria-checked="true"]{border-color:var(--ok);background:var(--ok-bg);}
+.switch-fila[aria-checked="true"] .switch-marca{border-color:var(--ok);background:var(--ok);}
+.switch-fila[aria-checked="true"] .switch-marca::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border:2px solid #fff;border-top:0;border-left:0;transform:rotate(42deg);}
+@media (prefers-reduced-motion:reduce){.switch-marca{transition:none;}}
+
+/* radar del conductor */
+.radar-card{padding:0;overflow:hidden;}
+.radar-mapa{position:relative;height:46dvh;min-height:280px;max-height:420px;}
+.radar-mapa .mapwrap{position:absolute;inset:0;}
+.radar-mapa .leaflet-container{width:100%;height:100%;font-family:var(--font);z-index:1;}
+.card.alerta{border-color:var(--bad);border-left:3px solid var(--bad);}
+
+/* espacio ofrecido desde la pantalla bloqueada */
+.locked-espacio{display:flex;gap:.4rem;margin-top:.8rem;}
+.locked-chip{flex:1;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:.18rem;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:rgba(255,255,255,.07);color:#dce4eb;padding:.5rem .3rem;font:700 .6rem var(--font);text-align:center;line-height:1.2;cursor:pointer;}
+.locked-chip[aria-checked="true"]{background:#f5f7fa;border-color:#f5f7fa;color:#11161c;}

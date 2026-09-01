@@ -1,0 +1,23 @@
+/* ============================================================
+   mapa.css — capa cartográfica
+   El dibujo lo hace Leaflet; acá solo vive el contenedor del mapa
+   y el selector de líneas que va encima. Los colores salen de
+   tokens.css para que el mapa cambie junto con el resto del tema.
+   ============================================================ */
+.mapwrap{position:absolute;inset:0;background:var(--map-land);overflow:hidden}
+
+/* selector de líneas sobre el mapa */
+.chips{
+  position:absolute;top:.6rem;left:.6rem;right:.6rem;display:flex;gap:.35rem;
+  overflow-x:auto;padding-bottom:.2rem;scrollbar-width:none;z-index:3;
+}
+.chips::-webkit-scrollbar{display:none}
+.chip{
+  flex:none;border:1px solid var(--line);background:var(--panel);color:var(--ink2);
+  padding:.34rem .6rem;border-radius:20px;font-size:.7rem;font-weight:600;cursor:pointer;
+  display:inline-flex;align-items:center;gap:.34rem;box-shadow:var(--shadow);
+  white-space:nowrap;font-family:var(--font);
+}
+.chip i{width:7px;height:7px;border-radius:50%;display:block;flex:none}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--amber);outline-offset:2px}

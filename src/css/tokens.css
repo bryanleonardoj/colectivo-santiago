@@ -1,0 +1,59 @@
+/* ============================================================
+   tokens.css — sistema de diseño
+   Único lugar donde se definen colores, sombras y tipografías.
+   El resto del CSS consume estas variables y nunca escribe un
+   color a mano. Cambiar el tema es cambiar este archivo.
+   ============================================================ */
+:root{
+  --bg:#EFF1F4; --panel:#FFFFFF;
+  --ink:#13161B; --ink2:#5B6472; --ink3:#8A929E;
+  --line:#E2E6EB; --line2:#EDF0F3;
+
+  --amber:#C97A06; --amber-ink:#8A5300; --amber-bg:#FDF0DA;
+  --ok:#1E7A5A; --ok-bg:#DCEFE7;
+  --bad:#B33A3A; --bad-bg:#F8E3E3; --bad-ink:#FFFFFF;
+
+  --map-land:#E8EBEF; --map-road:#FFFFFF; --map-casing:#D5DAE1;
+  --map-minor:#F4F6F8; --map-water:#C2D6E6; --map-park:#D9E4D2; --map-label:#78818E;
+
+  --l12:#C4472F; --l27:#1F7A66; --l04:#2F5DA8; --l33:#7E4BA8;
+
+  --shadow:0 1px 2px rgba(16,20,26,.06),0 10px 30px -18px rgba(16,20,26,.35);
+  --phone-shadow:0 2px 6px rgba(16,20,26,.08),0 30px 60px -30px rgba(16,20,26,.5);
+
+  --font:Manrope,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+
+/* Tema oscuro del sistema. Se excluye [data-theme="light"] para que
+   la elección explícita del usuario gane por sobre el sistema. */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C0E11; --panel:#161A1F;
+    --ink:#E8EBEF; --ink2:#A2AAB5; --ink3:#767E8A;
+    --line:#252A31; --line2:#1E2228;
+    --amber:#EDA53A; --amber-ink:#F2BE72; --amber-bg:#3A2C13;
+    --ok:#5BC49B; --ok-bg:#153328;
+    --bad:#E58585; --bad-bg:#3A1E1E; --bad-ink:#2A1010;
+    --map-land:#12161A; --map-road:#2E353E; --map-casing:#1B2026;
+    --map-minor:#1E242A; --map-water:#152838; --map-park:#16261A; --map-label:#7A838F;
+    --l12:#E4735B; --l27:#4FB79E; --l04:#6C97DC; --l33:#B183D8;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 30px -18px rgba(0,0,0,.8);
+    --phone-shadow:0 2px 6px rgba(0,0,0,.5),0 30px 60px -30px rgba(0,0,0,.9);
+  }
+}
+
+/* Tema oscuro elegido con el botón de la interfaz. */
+:root[data-theme="dark"]{
+  --bg:#0C0E11; --panel:#161A1F;
+  --ink:#E8EBEF; --ink2:#A2AAB5; --ink3:#767E8A;
+  --line:#252A31; --line2:#1E2228;
+  --amber:#EDA53A; --amber-ink:#F2BE72; --amber-bg:#3A2C13;
+  --ok:#5BC49B; --ok-bg:#153328;
+  --bad:#E58585; --bad-bg:#3A1E1E; --bad-ink:#2A1010;
+  --map-land:#12161A; --map-road:#2E353E; --map-casing:#1B2026;
+  --map-minor:#1E242A; --map-water:#152838; --map-park:#16261A; --map-label:#7A838F;
+  --l12:#E4735B; --l27:#4FB79E; --l04:#6C97DC; --l33:#B183D8;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 30px -18px rgba(0,0,0,.8);
+  --phone-shadow:0 2px 6px rgba(0,0,0,.5),0 30px 60px -30px rgba(0,0,0,.9);
+}
